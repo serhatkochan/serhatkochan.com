@@ -41,7 +41,7 @@ export const generateMetadata = async ({params}: Props): Promise<Metadata> => {
 const Tag = async ({params: {tag}}: {params: {tag: string}}) => {
     const relatedNotes = await notesApi.getNotesByTag(tag);
     return (
-        <PageLayout title="Tags" intro={`All the articles from #${tag}`}>
+        <PageLayout title="Tags" intro={`#${tag} Hakkında tüm makaleler`}>
             <div className="mt-24 md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
                 <div className="flex max-w-3xl flex-col space-y-16">
                     {relatedNotes.map((note) => (

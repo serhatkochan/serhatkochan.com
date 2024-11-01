@@ -139,7 +139,7 @@ export const NotionBlockRenderer = ({ block }: Props) => {
       );
     default:
       return (
-        <>❌ Unsupported block (${type === 'unsupported' ? 'unsupported by Notion API' : type})</>
+        <>❌ Desteklenmeyen Blok (${type === 'unsupported' ? 'unsupported by Notion API' : type})</>
       );
   }
 };
