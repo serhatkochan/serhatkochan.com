@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: 'Serhat Koçhan Kişisel Web Sitesi',
         short_name: 'Serhat Koçhan',
-        description: 'Serhat Koçhan için oluşturulmuş, notlar, hakkında, araçlar, faydalı ve kullanılabilir bağlantıların olduğu kişisel web sitesi.',
+        description: 'Serhat Koçhan\'ın notlarını, projelerini ve favori araçlarını paylaştığı, kişisel ve profesyonel içeriklerin bulunduğu web sitesi.',
         start_url: '/',
         display: 'standalone',
         background_color: '#18181b',

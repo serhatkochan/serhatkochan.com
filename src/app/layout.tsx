@@ -13,7 +13,7 @@ import {Footer} from "components/Footer";
 
 export const metadata: Metadata = {
     title: "Serhat Koçhan",
-    description: 'Serhat Koçhan için oluşturulmuş, notlar, hakkında, araçlar, faydalı ve kullanılabilir bağlantıların olduğu kişisel web sitesi.',
+    description: 'Serhat Koçhan\'ın notlarını, projelerini ve favori araçlarını paylaştığı, kişisel ve profesyonel içeriklerin bulunduğu web sitesi.',
 };
 
 export default function RootLayout({children}: Readonly<{ children: ReactNode }>) {
