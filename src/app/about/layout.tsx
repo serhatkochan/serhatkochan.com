@@ -3,7 +3,7 @@ import {Metadata} from "next";
 
 export const metadata: Metadata = {
     title: 'Serhat Koçhan - Hakkında',
-    description: 'Serhat Koçhan web sitesi için oluşturulmuş Hakkında sayfası. Kendimden bahsettiğim bölüm burada bulunuyor.',
+    description: 'Serhat Koçhan\'ın kendisi hakkında bilgi verdiği, kişisel ve profesyonel yaşamına dair detayların paylaşıldığı Hakkında sayfası.',
     openGraph: {
         title: 'Hakkında',
         type: 'website'

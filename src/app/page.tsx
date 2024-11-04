@@ -12,7 +12,7 @@ import {Photos} from "components/Photos";
 export const metadata: Metadata = {
     metadataBase: new URL(`${process.env.NEXT_SSL_URL}`),
     title: 'Serhat Koçhan - Anasayfa',
-    description: 'Serhat Koçhan web sitesi için oluşturulmuş Anasayfa. Oluşturduğum notlardan en son 5 tanesini ve İş deneyimini içeriyor.',
+    description: 'Serhat Koçhan\'ın notlarını, projelerini ve favori araçlarını paylaştığı, kişisel ve profesyonel içeriklerin bulunduğu web sitesi.',
     openGraph: {
         type: 'website'
     }

@@ -8,7 +8,7 @@ import {Metadata} from "next";
 export const metadata: Metadata = {
     metadataBase: new URL(`${process.env.NEXT_SSL_URL}`),
     title: 'Serhat Koçhan - Notlar',
-    description: 'Serhat Koçhan web sitesi için oluşturulmuş Notlar sayfası. Oluşturduğum notları burada bulunuyor. Etkilerlere göre filtreleme yapılabilir.',
+    description: 'Serhat Koçhan\'ın web sitesindeki Notlar sayfası. Kendi oluşturduğu notları keşfedin ve etiketlere göre filtreleyin.',
     openGraph: {
         type: 'website'
     },
