@@ -12,7 +12,7 @@ import 'styles/prism.css';
 import {Footer} from "components/Footer";
 
 export const metadata: Metadata = {
-    title: "Serhat Koçhan",
+    title: "Serhat Koçhan - Kişisel Web Sitesi",
     description: 'Serhat Koçhan\'ın notlarını, projelerini ve favori araçlarını paylaştığı, kişisel ve profesyonel içeriklerin bulunduğu web sitesi.',
 };
 

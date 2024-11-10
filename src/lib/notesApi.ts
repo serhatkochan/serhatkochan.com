@@ -3,6 +3,7 @@ import { Client, isFullPage } from '@notionhq/client';
 import { BlockObjectResponse, PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import { compareAsc, compareDesc } from 'date-fns';
 import { getPlaiceholder } from 'plaiceholder';
+import { revalidatePath } from 'next/cache'
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -98,6 +99,7 @@ class NotesApi {
   ) {}
 
   async getNotes(sortOrder: 'asc' | 'desc' = 'desc', limit?: number) {
+    revalidatePath('');
     const notes = await this.getDatabaseContent(this.databaseId);
 
     return notes
