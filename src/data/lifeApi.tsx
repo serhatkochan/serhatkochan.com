@@ -10,7 +10,7 @@ export const Name = 'Serhat Koçhan';
 
 export const About = (
     <>
-        &quot;Quantum-Level Senior Developer&quot;
+        &quot;Quantum-Level Senior Developer, Prompt Whisperer&quot;
     </>
 );
 export const AboutExtended = `Kocaeli'de yaşıyorum, Düzce Üniversitesi Bilgisayar Mühendisliği mezunuyum. Motosiklet ile yolculuk etmeyi, satranç oynamayı, kitap okumayı ve hayal gücümü zorlayan şeyler yaratmayı seviyorum.`;
