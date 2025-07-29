@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{ children: ReactNode }>) {
     return (
         <html lang="en" className="h-screen antialiased" suppressHydrationWarning>
-            <body className='flex flex-col h-full'>
+            <body className='flex flex-col h-full bg-zinc-50 dark:bg-zinc-900'>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
@@ -27,7 +27,7 @@ export default function RootLayout({children}: Readonly<{ children: ReactNode }>
                     disableTransitionOnChange
                 >
                     <div
-                        className={clsx(GeistSans.className, 'flex flex-col bg-zinc-50 dark:bg-black text-zinc-700 dark:text-zinc-300')}>
+                        className={clsx(GeistSans.className, 'flex flex-col bg-zinc-50 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300')}>
                         <div className="fixed inset-0 flex justify-center sm:px-8">
                             <div className="flex w-full max-w-7xl lg:px-8">
                                 <div

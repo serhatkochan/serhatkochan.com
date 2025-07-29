@@ -19,6 +19,14 @@ import {Quote} from "components/Quote";
 
 const Page = () => {
     const randomQuote = useMemo(() => Quotes[Math.floor(Math.random() * Quotes.length)], []) as {content: string, author: string};
+    
+    const experienceYears = useMemo(() => {
+        const startDate = new Date('2021-06-01');
+        const currentDate = new Date();
+        const diffTime = Math.abs(currentDate.getTime() - startDate.getTime());
+        const diffYears = diffTime / (1000 * 60 * 60 * 24 * 365.25);
+        return Math.round(diffYears);
+    }, []);
 
     return (
         <Container className="mt-16 sm:mt-32">
@@ -50,15 +58,10 @@ const Page = () => {
                     <Section>
                         <Section.Title as="h2">İş Deneyimi</Section.Title>
                         <Section.Content>
-                            Kod yazmanın ve problemlere çözüm üretmenin heyecanını erken yaşta keşfettim.
-                            İlk çok sayfalı web sitemi, 9 yaşında HTML ve CSS kullanarak, metin belgesiyle oluşturdum.
-                            Lise yıllarındayken, günlük 5 hesap sınırını aşarak otomatik ve sınırsız Hotmail hesabı oluşturulabilmesi için çeşitli çözümler üzerine çalıştım (Microsoft&apos;u geçemedim).
-                            Üniversite döneminde ESP32 gibi mikrodenetleyiciler ile gömülü sistemler geliştirdim ve çeşitli şirketler için uygulamalar yazdım.
-                            Teknolojiye olan tutkum ve sınırsız öğrenme arzusuyla, her geçen gün kendimi bu alanda daha da geliştirmekteyim.
+                            Kod yazmanın ve problemlere çözüm üretmenin heyecanını erken yaşta keşfettim. İlk çok sayfalı web sitemi, 9 yaşında HTML ve CSS kullanarak, metin belgesiyle oluşturdum. Lise yıllarımda bu ilgi, yazılımın görünen yüzünden daha derinine, ağların ve sistemlerin çalışma mimarisine yöneldi. Mevcut sistemlerin sınırlarını test etme ve güvenlik katmanlarını anlama merakıyla çeşitli denemeler yaptım. Üniversite eğitimim ise bu temeli akademik bir disiplinle birleştirdi; ESP32 ile gömülü sistemler ve nesnelerin interneti (IoT) projeleri geliştirirken, aynı zamanda Java Spring Boot ile güçlü sunucu tarafı uygulamaları ve React ile modern kullanıcı arayüzleri inşa ettim. Teknolojiye olan tutkum ve sınırsız öğrenme arzusuyla, her geçen gün kendimi bu alanda daha da geliştirmekteyim.
                             <br/>
                             <br/>
-                            Yaklaşık 3 yıllık tam zamanlı çalışma deneyimim var.
-                            Şu anda{' '}
+                            Yaklaşık {experienceYears} yıllık tam zamanlı çalışma deneyimim var. Şu anda{' '}
                             <ExternalLink href={'https://www.ufsteknoloji.com.tr/'}>UFS Teknoloji</ExternalLink>{' '}
                             şirketinde Frontend developer olarak React.js, JavaScript ve TypeScript kullanarak web
                             uygulamaları geliştiriyorum. İş hayatı dışında çeşitli projelerin oluşturulması, review ve refactor edilmesi süreçlerinde

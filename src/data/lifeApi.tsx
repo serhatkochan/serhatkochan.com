@@ -13,7 +13,7 @@ export const About = (
         &quot;Quantum-Level Senior Developer, Prompt Whisperer&quot;
     </>
 );
-export const AboutExtended = `Kocaeli'de yaşıyorum, Düzce Üniversitesi Bilgisayar Mühendisliği mezunuyum. Motosiklet ile yolculuk etmeyi, satranç oynamayı, kitap okumayı ve hayal gücümü zorlayan şeyler yaratmayı seviyorum.`;
+export const AboutExtended = `Kocaeli'de yaşıyorum, Düzce Üniversitesi Bilgisayar Mühendisliği mezunuyum. Seyahat etmeyi, satranç oynamayı, kitap okumayı ve hayal gücümü zorlayan şeyler yaratmayı seviyorum.`;
 
 export type Project = {
     title: string;
@@ -121,8 +121,8 @@ export const Work = [
 
 export const Books = [
     {
-        name: 'Stoacının Günlüğü',
-        link: 'https://amzn.eu/d/5TuipIG',
+        name: 'Tongue Fu',
+        link: 'https://amzn.eu/d/8aOkNpE',
     },
     {
         name: 'Pür Dikkat',
@@ -162,230 +162,99 @@ export const Blogs = [
 
 export const Quotes = [
     {
-        content: 'İki hayatımız vardır ve ikincisi, sadece bir tane hayatımız olduğunu fark ettiğimizde başlar.',
-        author: '― Confucius',
+        content: 'En iyi, iyinin düşmanıdır.',
+        author: '― Voltaire',
     },
     {
-        content: 'Bir dağı yerinden oynatan adam, küçük taşları taşıyarak işe başlar.',
-        author: '― Confucius',
+        content: 'Tatmin edici sonuçların izlediği davranışlar tekrarlanma eğilimi gösterir',
+        author: '― Thorndike',
     },
     {
-        content: 'Bir soru soran kişi bir dakikalığına aptaldır, soru sormayan ömür boyu aptaldır.',
-        author: '― Confucius',
+        content: 'Arzu başlatır. Haz sürdürür. İstemek ve beğenmek davranışın itici gücüdür. Bir şey sizde arzu uyandırmıyorsa onu yapmanız için hiçbir neden yoktur. Arzu ve istek bir davranışı başlatan şeylerdir. Ama bir şey keyifli değilse onu tekrarlamak için bir nedeniniz olmaz. Haz ve tatmin, davranışı sürdüren şeylerdir. Motive hissetmek sizi eyleme geçirir. Başarılı hissetmek ise o eylemi tekrarlamanızı sağlar.',
+        author: '― Atomik Alışkanlıklar',
     },
     {
-        content:
-            "Yirmi yıl sonra, yapmadıkların için, yaptıklarından daha fazla hayal kırıklığına uğrayacaksın. Bu yüzden bağlarını çöz. Güvenli limandan ayrıl. Rüzgarları yakala. Keşfet. Hayal et. Bul.",
-        author: '― Mark Twain',
+        content: 'Hiç kimse akıl almak istemez, istedikleri sadece teyit edilmektir',
+        author: '― John Steinbeck',
     },
     {
-        content:
-            "Diğer insanların başarman gerektiğini düşündüğü şeyleri başarmak zorunda değilsin. Ben de onların beklediği gibi olmak zorunda değilim. Bu onların hatası, benim başarısızlığım değil.",
-        author: '― Mark Twain',
+        content: 'İncelik, düşman yaratmadan sözünü söyleyebilme sanatıdır.',
+        author: '― Anonim',
     },
     {
-        content:
-            'Düşüncelerine dikkat et, onlar sözlerin olur; sözlerine dikkat et, onlar eylemlerin olur; eylemlerine dikkat et, onlar alışkanlıkların olur; alışkanlıklarına dikkat et, onlar karakterin olur; karakterine dikkat et, o kaderin olur.',
-        author: '― Laozi',
+        content: 'Kuvvetlerle mücadele etmeyin, onları kullanın.',
+        author: '― R. Buckminster Fuller',
     },
     {
-        content: 'Cehennemden geçiyorsan, devam et.',
-        author: '― Winston S. Churchill',
+        content: 'Başkaları hakkında olumsuz konuşmak kendimizi övmenin onursuz bir yoludur.',
+        author: '― Will Durant',
     },
     {
-        content: 'Tavır, küçük bir şeydir ama büyük fark yaratır.',
-        author: '― Winston S. Churchill',
+        content: 'Bilgeliğin zirvesi bugünde yaşamak, geleceği planlamak ve geçmişten kar sağlamaktır.',
+        author: '― Anonim',
     },
     {
-        content:
-            'Düşünmek kolaydır. Hareket etmek zordur. Ancak dünyadaki en zor şey, düşüncelerine uygun şekilde hareket etmektir.',
-        author: '― Johann Wolfgang von Goethe',
+        content: 'Eğitimin sırrı öğrencilere saygı duymakta yatar.',
+        author: '― Ralph Waldo Emerson',
     },
     {
-        content: 'Bir insanın korkması gereken şey ölüm değil, hiç yaşamaya başlamamış olmaktır.',
+        content: 'Hata bir öğretmendir, acımasızdır ama en iyisidir. Hatalarınızı sizin için çalışır hale getirin.',
+        author: '― Tongue Fu',
+    },
+    {
+        content: 'Öğretmen olmayı arzu edenlerin gerçek amacı kendi görüşlerini aktarmak değil, kafaları tutuşturmak olmalıdır.',
+        author: '― Frederick Robertson',
+    },
+    {
+        content: 'Eğer elinizdeki tek alet bir çekiçse, her problemi bir çivi olarak görmeye başlarsınız.',
+        author: '― Abraham Maslow',
+    },
+    {
+        content: 'Kendinizi yükseltmek istiyorsanız, başka birisini yükseltin.',
+        author: '― Booker T. Washington',
+    },
+    {
+        content: 'Eylem, umutsuzluğa kapılmanın karşı kutbudur.',
+        author: '― Joan Baez',
+    },
+    {
+        content: 'Size başarının değil ama başarısızlığın formülünü verebilirim: Herkese hoş görünmeye çalışın.',
+        author: '― Bill Cosby',
+    },
+    {
+        content: 'Dünyanın yarısı söyleyecek bir şeyi olan ama söyleyemeyen, öteki yarısı da söyleyecek bir şeyi olmayan ama durmadan konuşan insanlardan oluşur.',
+        author: '― Robert Frost',
+    },
+    {
+        content: 'Üzerine gittiğiniz her şeyi değiştiremezsiniz, ama üzerine gitmediğiniz şeyleri hiç değiştiremezsiniz.',
+        author: '― John. F. Kennedy',
+    },
+    {
+        content: 'Eğer herhangi dışsal bir olgu size sıkıntı veriyorsa, çektiğiniz acı o şeyden değil, sizin ona ilişkin tasavvurlarınızdan kaynaklanıyordur; ve siz her an bunu iptal etme gücüne sahipsinizdir.',
         author: '― Marcus Aurelius',
     },
     {
-        content: 'Eğer doğru değilse, yapma; eğer gerçek değilse, söyleme.',
-        author: '― Marcus Aurelius',
+        content: 'Kalite arzu ediyorsanız, ona sahipmişsiniz gibi davranın. \'-mış gibi\' tekniğini deneyin.',
+        author: '― William James',
     },
     {
-        content:
-            'Zihnin üzerinde gücün var - dış olaylar üzerinde değil. Bunu fark edersen, güç bulacaksın.',
-        author: '― Marcus Aurelius',
+        content: 'Bilmek yetmez, uygulamamız gerekir. İstemek yetmez, yapmamız gerekir.',
+        author: '― Johann Goethe',
     },
     {
-        content: 'Hayatının mutluluğu, düşüncelerinin kalitesine bağlıdır.',
-        author: '― Marcus Aurelius',
+        content: 'İlk seferde başaramadıysanız, ortalamanın üzerindesiniz demektir.',
+        author: '― Anonim',
     },
     {
-        content:
-            'Eğer dışarıdan gelen bir şey seni üzüyor ise, acı, şeyin kendisinden değil, ona verdiğin değerden kaynaklanır; ve bunu her an geri alma gücüne sahipsin.',
-        author: '― Marcus Aurelius',
+        content: 'Mutluluk bir amaç değildir. Bir yan üründür.',
+        author: '― Eleanor Roosevelt',
     },
     {
-        content: 'Yerden yıldızlara giden kolay bir yol yoktur.',
-        author: '― Seneca',
+        content: 'En büyük zayıflığımız kolay vazgeçmemizdir. Başarının en emin yolu her zaman bir kere daha denemektir.',
+        author: '― Thomas Edison',
     },
     {
-        content: 'Gerçekte değil, hayal gücümüzde daha sık acı çekeriz.',
-        author: '― Seneca',
+        content: 'Yaşamınızı değiştirmek istiyorsanız hemen başlayın, hiçbir istisnaya izin vermeyin, atak olun.',
+        author: '― William James',
     },
 ] as const;
-
-export const Tools = {
-    Workstation: {
-        title: 'İş İstasyonu',
-        list: [
-            {
-                title: 'Asus Rog Strix Z790-A Gaming WiFi 7800MHz',
-                description: 'Ana Kart',
-                href: 'https://amzn.eu/d/97kv0RL',
-            },
-            {
-                title: 'Intel Core i9-13900K 5.8GHz',
-                description: 'İşlemci',
-                href: 'https://amzn.eu/d/amMplal',
-            },
-            {
-                title: 'ASUS ROG STRIX LC II 280 ARGB ',
-                description: "Sıvı Soğutma",
-                href: 'https://amzn.eu/d/bOJ8QUM',
-            },
-            {
-                title: 'ASUS GeForce TUF RTX 4080 16GB',
-                description: 'Ekran Kartı',
-                href: 'https://amzn.eu/d/foI6ZMy',
-            },
-            {
-                title: 'Samsung 990 PRO',
-                description: 'M.2',
-                href: 'https://amzn.eu/d/dCgRCLJ',
-            },
-            {
-                title: 'ASUS ROG-STRIX-1000G',
-                description: 'Güç Kaynağı',
-                href: 'https://amzn.eu/d/1u7nRTx',
-            },
-            {
-                title: 'ASUS TUF Gaming GT502 V2 White',
-                description: 'Kasa',
-                href: 'https://amzn.eu/d/86hRGMt',
-            },
-            {
-                title: 'ASUS 27" TUF GAMING VG27AQZ 165Hz 1ms WQHD',
-                description: 'Ana Monitör',
-                href: 'https://www.gaming.gen.tr/urun/174790/asus-tuf-gaming-vg27aqz-27-inc-165hz-1ms-wqhd-adaptive-sync-ips-gaming-monitor/'
-            },
-            {
-                title: 'Asus 23.6" Tuf Gaming VG24VQ 144Hz 1ms Curved',
-                description: "Yan Monitör",
-                href: "https://www.hepsiburada.com/asus-tuf-gaming-vg24vq-23-6-144hz-1ms-hdmi-display-freesync-curved-monitor-p-HBV00000R2YJX"
-            },
-            {
-                title: 'Elgato Key Light Air',
-                description: `Studio ışığı için ideal.`,
-                href: 'https://amzn.eu/d/12E2u4G',
-            },
-            {
-                title: 'Philips Hue Iris',
-                description: 'Güçlü Philips ekosistemi ve ışık kalitesi',
-                href: 'https://amzn.eu/d/hJJNiSs'
-            },
-            {
-                title: 'Philips Hue Play',
-                description: 'Güçlü Philips ekosistemi ve ışık kalitesi',
-                href: 'https://amzn.eu/d/f27XSQ2'
-            },
-        ]
-    },
-    Software: {
-        title: 'Yazılım',
-        list: [
-            {
-                title: 'Intellij IDEA',
-                description: `WebStorm üzerinde gelen bütün özelliklere ek olarak üzerinde gelen Veritabanı konfigürasyonu ve Java projelerim için vazgeçemediğim bir ide.`,
-                href: 'https://www.jetbrains.com/idea/',
-            },
-            {
-                title: 'Figma',
-                description: `Hedefim tasarımcı olmak değil ama güçlü bir şekilde kullanmaya çalışıyorum.`,
-                href: 'https://www.figma.com/',
-            },
-            {
-                title: 'Notion',
-                description: `Aklıma gelen her şey için ilk uğradığım yer burası.`,
-                href: 'https://www.notion.so/',
-            },
-        ],
-    }
-} as const;
-
-export const UsefulTools = [
-    {
-        title: 'clip-path maker',
-        description: 'Karmaşık kırpma işlemlerinizi hızlıca yapın.',
-        href: 'https://bennettfeely.com/clippy/',
-    },
-    {
-        title: 'Filter Generator',
-        description: 'Karmaşık CSS filtrelerini zahmetsizce oluşturun ve uygulayın.',
-        href: 'https://bennettfeely.com/clippy/'
-    },
-    {
-        title: 'Glow Generator',
-        description: 'Özel parlama efektinizle tasarımlarınıza ışıltı katın.',
-        href: 'https://cssbud.com/css-generator/css-glow-generator/'
-    },
-    {
-        title: 'Glassmorphism Generator',
-        description: 'Cam efektiyle modern bir görünüm kazandırın.',
-        href: 'https://css.glass/'
-    },
-    {
-        title: 'Neumorphism Generator',
-        description: 'Yumuşak gölgelerle 3D görünüm oluşturun.',
-        href: 'https://neumorphism.io/',
-    },
-    {
-        title: 'Custom Shape Dividers',
-        description: 'Özel şekillerle dalga efekti oluşturun.',
-        href: 'https://www.shapedivider.app/'
-    },
-    {
-        title: 'Blobmaker',
-        description: 'Hayal gücünüzdeki damla efektleriyle tasarımlarınızı zenginleştirin.',
-        href: 'https://www.blobmaker.app/'
-    },
-    {
-        title: 'Email Template Send and Test',
-        description: 'Email şablonlarınızı gönderin ve test edin.',
-        href: 'https://app.postdrop.io/'
-    },
-    {
-        title: 'Tailwind CSS Color Generator',
-        description: 'Tailwind CSS için renk paletleri hızlıca oluşturun.',
-        href: 'https://uicolors.app/create'
-    },
-    {
-        title: 'React Shimmer Effect',
-        description: 'Modern React projelerine shimmer yükleme efektleri ekleyin.',
-        href: 'https://www.npmjs.com/package/react-shimmer-effect'
-    },
-    {
-        title: 'React Email',
-        description: 'React ile email şablonlarını kolayca oluşturun ve yönetin.',
-        href: 'https://react.email/docs/introduction'
-    },
-    {
-        title: 'Notion Number',
-        description: 'Notion panolarınıza dinamik efekt ile sayılar ekleyin.',
-        href: 'https://motion-number.barvian.me/'
-    },
-    {
-        title: 'Nes css',
-        description: 'Retro video oyun stilinde CSS tasarımları yapın.',
-        href: 'https://nostalgic-css.github.io/NES.css/'
-    }
-
-] as const

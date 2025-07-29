@@ -25,16 +25,6 @@ export const NavigationItems = [
         type: 'internal',
     },
     {
-        name: 'Araçlar',
-        href: '/uses',
-        type: 'internal',
-    },
-    {
-        name: 'Faydalı',
-        href: '/useful',
-        type: 'internal',
-    },
-    {
         name: 'Hakkında',
         href: '/about',
         type: 'internal',

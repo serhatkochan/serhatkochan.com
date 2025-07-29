@@ -20,8 +20,6 @@ interface Props {
 export const NoteLayout = ({ children, meta, previousPathname }: Props) => {
   let router = useRouter();
 
-  console.log(meta.date, formatDate(meta.date));
-
   return (
     <Container className="mt-16 lg:mt-32">
       <div className="xl:relative">

@@ -12,12 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: 'https://serhatkochan.com/creating',
         },
         {
-            url: 'https://serhatkochan.com/uses',
-        },
-        {
-            url: 'https://serhatkochan.com/useful',
-        },
-        {
             url: 'https://serhatkochan.com/about',
         },
         {
