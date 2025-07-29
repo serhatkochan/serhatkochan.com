@@ -4,7 +4,12 @@ import { PageTitle } from 'components/PageTitle';
 import type {Metadata} from "next";
 
 export const metadata: Metadata = {
-  title: "Sayfa Bulunamadı",
+  title: "Sayfa Bulunamadı - 404",
+  description: "Aradığınız sayfa bulunamadı. Serhat Koçhan\'ın kişisel web sitesinde gezinmeye devam edin.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function NotFound() {

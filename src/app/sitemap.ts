@@ -1,66 +1,58 @@
 import type { MetadataRoute } from 'next'
+import { notesApi } from 'lib/notesApi'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    return [
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    const baseUrl = 'https://serhatkochan.com'
+    
+    // Tüm notları al
+    const notes = await notesApi.getNotes()
+    
+    // Tüm etiketleri al
+    const tags = await notesApi.getAllTags()
+    
+    // Ana sayfalar
+    const staticPages = [
         {
-            url: 'https://serhatkochan.com',
+            url: baseUrl,
+            lastModified: new Date(),
+            changeFrequency: 'daily' as const,
+            priority: 1,
         },
         {
-            url: 'https://serhatkochan.com/notes',
+            url: `${baseUrl}/notes`,
+            lastModified: new Date(),
+            changeFrequency: 'daily' as const,
+            priority: 0.9,
         },
         {
-            url: 'https://serhatkochan.com/creating',
+            url: `${baseUrl}/creating`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
         },
         {
-            url: 'https://serhatkochan.com/about',
-        },
-        {
-            url: 'https://serhatkochan.com/notes/javascriptin-3-silahşörü-spread-rest-destructuring',
-        },
-        {
-            url: 'https://serhatkochan.com/notes/sinirlarinda-useEffect-kullanmak',
-        },
-        {
-            url: 'https://serhatkochan.com/notes/react-component-kullanimi-ve-optimizasyonu',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/javascript',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/react',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/rest',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/spread',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/destructuring',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/es6',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/useEffect',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/optimizasyon',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/render',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/useMemo',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/memo',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/Hight-Order-Component',
-        },
-        {
-            url: 'https://serhatkochan.com/tags/HOC',
+            url: `${baseUrl}/about`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
         },
     ]
+    
+    // Not sayfaları
+    const notePages = notes.map((note) => ({
+        url: `${baseUrl}/notes/${note.slug}`,
+        lastModified: new Date(note.lastEditedAt),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+    }))
+    
+    // Etiket sayfaları
+    const tagPages = tags.map((tag) => ({
+        url: `${baseUrl}/tags/${tag}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.6,
+    }))
+    
+    return [...staticPages, ...notePages, ...tagPages]
 }

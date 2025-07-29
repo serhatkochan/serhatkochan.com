@@ -10,31 +10,45 @@ interface Props {
 }
 
 export const generateMetadata = async ({params}: Props): Promise<Metadata> => {
-    const title = params.tag;
-    const description = `${params.tag} Etiketine göre yazılan makaleleri listeleyin.`;
+    const title = `#${params.tag} Etiketi`;
+    const description = `${params.tag} etiketi ile ilgili yazılım, programlama ve teknoloji notları. Serhat Koçhan\'ın ${params.tag} konusundaki yazıları ve deneyimleri.`;
     const openGraphImageUrl = `/tags/${params.tag}/opengraph-image?title=${title}&description=${encodeURIComponent(description)}`;
 
     return {
         metadataBase: new URL(`${process.env.NEXT_SSL_URL}`),
-        title: `Serhat Koçhan - ${title}`,
+        title: title,
         description: description,
+        keywords: [params.tag, 'yazılım', 'programlama', 'teknoloji', 'notlar', 'etiket'],
+        authors: [{ name: 'Serhat Koçhan' }],
         openGraph: {
             title: title,
+            description: description,
+            type: 'website',
+            url: `https://serhatkochan.com/tags/${params.tag}`,
             images: [
                 {
                     url: openGraphImageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: title,
                 },
             ],
-            type: 'website'
         },
         twitter: {
+            card: 'summary_large_image',
             title: title,
+            description: description,
             images: [
                 {
                     url: openGraphImageUrl,
+                    alt: title,
                 }
             ],
-        }
+            creator: '@serhatkochan',
+        },
+        alternates: {
+            canonical: `https://serhatkochan.com/tags/${params.tag}`,
+        },
     };
 }
 

@@ -5,6 +5,7 @@ import {XIcon} from "components/icons/XIcon";
 import {NotionBlockRenderer} from "components/notion/NotionBlockRenderer";
 import {Metadata} from "next";
 import {notFound} from 'next/navigation';
+import Script from "next/script";
 
 
 interface Props {
@@ -21,25 +22,42 @@ export const generateMetadata = async ({params}: Props): Promise<Metadata> => {
 
     return {
         metadataBase: new URL(`${process.env.NEXT_SSL_URL}`),
-        title: `Serhat Koçhan - ${note.title}`,
+        title: note.title,
         description: note.description,
+        keywords: [...note.tags, 'yazılım', 'programlama', 'teknoloji', 'notlar'],
+        authors: [{ name: 'Serhat Koçhan' }],
         openGraph: {
             title: note.title,
+            description: note.description,
+            type: 'article',
+            url: `https://serhatkochan.com/notes/${params.slug}`,
             images: [
                 {
                     url: openGraphImageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: note.title,
                 },
             ],
-            type: 'website'
+            publishedTime: note.publishedAt,
+            modifiedTime: note.lastEditedAt,
+            authors: ['Serhat Koçhan'],
         },
         twitter: {
+            card: 'summary_large_image',
             title: note.title,
+            description: note.description,
             images: [
                 {
                     url: openGraphImageUrl,
+                    alt: note.title,
                 }
-            ]
-        }
+            ],
+            creator: '@serhatkochan',
+        },
+        alternates: {
+            canonical: `https://serhatkochan.com/notes/${params.slug}`,
+        },
     };
 }
 
@@ -51,35 +69,72 @@ const Note = async ({params}: Props) => {
         return notFound();
     }
     const noteContent = await notesApi.getNote(note.id);
+    
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": note.title,
+        "description": note.description,
+        "author": {
+            "@type": "Person",
+            "name": "Serhat Koçhan",
+            "url": "https://serhatkochan.com"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Serhat Koçhan",
+            "url": "https://serhatkochan.com"
+        },
+        "datePublished": note.publishedAt,
+        "dateModified": note.lastEditedAt,
+        "url": `https://serhatkochan.com/notes/${params.slug}`,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://serhatkochan.com/notes/${params.slug}`
+        },
+        "keywords": note.tags.join(", "),
+        "articleSection": "Technology",
+        "inLanguage": "tr-TR"
+    };
+    
     return (
-        <NoteLayout
-            meta={{title: note.title, description: note.description, date: note.publishedAt}}
-            previousPathname={'/notes'}
-        >
-            <div className="pb-32">
-                {
-                    note.inProgress && <h2 className="text-2xl font-semibold text-primary dark:text-primary">
-                        Bu makale üzerinde hala çalışılıyor. Lütfen daha sonra tekrar kontrol edin!
-                    </h2>
-                }
-                { !note.inProgress && noteContent?.map((block: any) => (
-                    <NotionBlockRenderer key={block.id} block={block}/>
-                ))}
+        <>
+            <Script
+                id="article-structured-data"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(structuredData)
+                }}
+            />
+            <NoteLayout
+                meta={{title: note.title, description: note.description, date: note.publishedAt}}
+                previousPathname={'/notes'}
+            >
+                <div className="pb-32">
+                    {
+                        note.inProgress && <h2 className="text-2xl font-semibold text-primary dark:text-primary">
+                            Bu makale üzerinde hala çalışılıyor. Lütfen daha sonra tekrar kontrol edin!
+                        </h2>
+                    }
+                    { !note.inProgress && noteContent?.map((block: any) => (
+                        <NotionBlockRenderer key={block.id} block={block}/>
+                    ))}
 
-                <hr/>
+                    <hr/>
 
-                <a
-                    className="group block text-xl font-semibold md:text-3xl no-underline"
-                    href={`http://x.com/share?text=${note.title}&url=${url}`}
-                >
-                    <h4 className="max-w-lg flex cursor-pointer flex-col duration-200 ease-in-out group-hover:text-primary group-hover:fill-primary fill-white text-wrap">
-                        <XIcon
-                            className="my-6 h-10 w-10 transform transition-transform group-hover:-rotate-12 fill-black dark:fill-white group-hover:fill-primary"/>
-                        Bu makaleyi beğendiyseniz X&apos;te arkadaşlarınızla paylaşmak için buraya tıklayın.
-                    </h4>
-                </a>
-            </div>
-        </NoteLayout>
+                    <a
+                        className="group block text-xl font-semibold md:text-3xl no-underline"
+                        href={`http://x.com/share?text=${note.title}&url=${url}`}
+                    >
+                        <h4 className="max-w-lg flex cursor-pointer flex-col duration-200 ease-in-out group-hover:text-primary group-hover:fill-primary fill-white text-wrap">
+                            <XIcon
+                                className="my-6 h-10 w-10 transform transition-transform group-hover:-rotate-12 fill-black dark:fill-white group-hover:fill-primary"/>
+                            Bu makaleyi beğendiyseniz X&apos;te arkadaşlarınızla paylaşmak için buraya tıklayın.
+                        </h4>
+                    </a>
+                </div>
+            </NoteLayout>
+        </>
     );
 };
 

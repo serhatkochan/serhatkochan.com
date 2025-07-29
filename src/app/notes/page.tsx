@@ -8,9 +8,18 @@ import {Metadata} from "next";
 export const metadata: Metadata = {
     metadataBase: new URL(`${process.env.NEXT_SSL_URL}`),
     title: 'Serhat Koçhan - Notlar',
-    description: 'Serhat Koçhan\'ın web sitesindeki Notlar sayfası. Kendi oluşturduğu notları keşfedin ve etiketlere göre filtreleyin.',
+    description: 'Serhat Koçhan\'ın yazılım, ürün geliştirme ve teknoloji üzerine yazdığı notlar. JavaScript, React, yapay zeka ve daha fazlası hakkında içerikler.',
+    keywords: ['yazılım', 'programlama', 'javascript', 'react', 'yapay zeka', 'teknoloji', 'notlar'],
     openGraph: {
-        type: 'website'
+        title: 'Serhat Koçhan - Notlar',
+        description: 'Yazılım, ürün geliştirme ve teknoloji üzerine notlar',
+        type: 'website',
+        url: 'https://serhatkochan.com/notes',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Serhat Koçhan - Notlar',
+        description: 'Yazılım, ürün geliştirme ve teknoloji üzerine notlar',
     },
 };
 
