@@ -3,18 +3,18 @@ import {Metadata} from "next";
 
 export const metadata: Metadata = {
     title: 'Serhat Koçhan - Hakkında',
-    description: 'Serhat Koçhan\'ın kişisel ve profesyonel yaşamı, deneyimleri, favori kitapları, videoları ve alıntıları. Frontend developer ve teknoloji tutkunu.',
-    keywords: ['serhat koçhan', 'frontend developer', 'react', 'javascript', 'typescript', 'hakkında', 'deneyim'],
+    description: 'Serhat Koçhan\'ın kişisel ve profesyonel yaşamı, deneyimleri, favori kitapları, videoları ve alıntıları. Fullstack developer ve teknoloji tutkunu.',
+    keywords: ['serhat koçhan', 'fullstack developer', 'react', 'javascript', 'typescript', 'java', 'spring boot', 'hakkında', 'deneyim'],
     openGraph: {
         title: 'Serhat Koçhan - Hakkında',
-        description: 'Frontend developer ve teknoloji tutkunu Serhat Koçhan\'ın kişisel ve profesyonel yaşamı',
+        description: 'Fullstack developer ve teknoloji tutkunu Serhat Koçhan\'ın kişisel ve profesyonel yaşamı',
         type: 'website',
         url: 'https://serhatkochan.com/about',
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Serhat Koçhan - Hakkında',
-        description: 'Frontend developer ve teknoloji tutkunu Serhat Koçhan\'ın kişisel ve profesyonel yaşamı',
+        description: 'Fullstack developer ve teknoloji tutkunu Serhat Koçhan\'ın kişisel ve profesyonel yaşamı',
     }
 };
 const Layout = ({children}: Readonly<{ children: ReactNode }>) => {

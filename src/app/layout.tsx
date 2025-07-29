@@ -14,11 +14,11 @@ import {Footer} from "components/Footer";
 
 export const metadata: Metadata = {
     title: {
-        default: "Serhat Koçhan - Frontend Developer & Teknoloji Tutkunu",
+        default: "Serhat Koçhan - Fullstack Developer & Teknoloji Tutkunu",
         template: "%s | Serhat Koçhan"
     },
-    description: 'Serhat Koçhan\'ın kişisel web sitesi. React, JavaScript, TypeScript ile web uygulamaları geliştiren frontend developer. Notlar, projeler ve deneyimler.',
-    keywords: ['serhat koçhan', 'frontend developer', 'react', 'javascript', 'typescript', 'web geliştirme', 'kişisel site'],
+    description: 'Serhat Koçhan\'ın kişisel web sitesi. React, JavaScript, TypeScript, Java Spring Boot ile fullstack uygulamalar geliştiren yazılım geliştirici. Notlar, projeler ve deneyimler.',
+    keywords: ['serhat koçhan', 'fullstack developer', 'react', 'javascript', 'typescript', 'java', 'spring boot', 'web geliştirme', 'mobil geliştirme', 'kişisel site'],
     authors: [{ name: 'Serhat Koçhan' }],
     creator: 'Serhat Koçhan',
     publisher: 'Serhat Koçhan',
@@ -66,8 +66,8 @@ export default function RootLayout({children}: Readonly<{ children: ReactNode }>
                                 "name": "UFS Teknoloji",
                                 "url": "https://www.ufsteknoloji.com.tr/"
                             },
-                            "description": "React, JavaScript, TypeScript ile web uygulamaları geliştiren frontend developer",
-                            "knowsAbout": ["React", "JavaScript", "TypeScript", "Web Development", "Frontend Development", "Next.js", "Node.js"],
+                            "description": "React, JavaScript, TypeScript, Java Spring Boot ile fullstack uygulamalar geliştiren yazılım geliştirici",
+                            "knowsAbout": ["React", "JavaScript", "TypeScript", "Java", "Spring Boot", "Web Development", "Mobile Development", "Fullstack Development", "Next.js", "Node.js", "React Native"],
                             "alumniOf": {
                                 "@type": "Organization",
                                 "name": "Düzce Üniversitesi",

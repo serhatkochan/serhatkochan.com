@@ -1,26 +1,20 @@
 import React from 'react';
 import {Metadata} from 'next'
-import Container from "components/Container";
-import {PageTitle} from "components/PageTitle";
-import {SocialLink} from "components/SocialLink";
-import {About, Name, SocialMedia} from "data/lifeApi";
-import {NotePreview} from "components/notes/NotePreview";
-import {Resume} from "components/Resume";
 import {notesApi} from "lib/notesApi";
-import {Photos} from "components/Photos";
 import Script from "next/script";
+import { AnimatedHomeContent } from './AnimatedHomeContent';
 
 export const metadata: Metadata = {
     metadataBase: new URL(`${process.env.NEXT_SSL_URL}`),
-    title: 'Serhat Koçhan - Frontend Developer & Teknoloji Tutkunu',
-    description: 'Serhat Koçhan\'ın kişisel web sitesi. React, JavaScript, TypeScript ile web uygulamaları geliştiren frontend developer. Notlar, projeler ve deneyimler.',
-    keywords: ['serhat koçhan', 'frontend developer', 'react', 'javascript', 'typescript', 'web geliştirme', 'kişisel site'],
+    title: 'Serhat Koçhan - Fullstack Developer & Teknoloji Tutkunu',
+    description: 'Serhat Koçhan\'ın kişisel web sitesi. React, JavaScript, TypeScript, Java Spring Boot ile fullstack uygulamalar geliştiren yazılım geliştirici. Notlar, projeler ve deneyimler.',
+    keywords: ['serhat koçhan', 'fullstack developer', 'react', 'javascript', 'typescript', 'java', 'spring boot', 'web geliştirme', 'mobil geliştirme', 'kişisel site'],
     authors: [{ name: 'Serhat Koçhan' }],
     creator: 'Serhat Koçhan',
     publisher: 'Serhat Koçhan',
     openGraph: {
-        title: 'Serhat Koçhan - Frontend Developer & Teknoloji Tutkunu',
-        description: 'React, JavaScript, TypeScript ile web uygulamaları geliştiren frontend developer. Notlar, projeler ve deneyimler.',
+        title: 'Serhat Koçhan - Fullstack Developer & Teknoloji Tutkunu',
+        description: 'React, JavaScript, TypeScript, Java Spring Boot ile fullstack uygulamalar geliştiren yazılım geliştirici. Notlar, projeler ve deneyimler.',
         type: 'website',
         url: 'https://serhatkochan.com',
         siteName: 'Serhat Koçhan',
@@ -28,8 +22,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Serhat Koçhan - Frontend Developer & Teknoloji Tutkunu',
-        description: 'React, JavaScript, TypeScript ile web uygulamaları geliştiren frontend developer.',
+        title: 'Serhat Koçhan - Fullstack Developer & Teknoloji Tutkunu',
+        description: 'React, JavaScript, TypeScript, Java Spring Boot ile fullstack uygulamalar geliştiren yazılım geliştirici.',
         creator: '@serhatkochan',
     },
     alternates: {
@@ -45,7 +39,7 @@ const Home = async () => {
         "@type": "WebSite",
         "name": "Serhat Koçhan - Kişisel Web Sitesi",
         "url": "https://serhatkochan.com",
-        "description": "Serhat Koçhan\'ın kişisel web sitesi. React, JavaScript, TypeScript ile web uygulamaları geliştiren frontend developer.",
+        "description": "Serhat Koçhan\'ın kişisel web sitesi. React, JavaScript, TypeScript, Java Spring Boot ile fullstack uygulamalar geliştiren yazılım geliştirici.",
         "author": {
             "@type": "Person",
             "name": "Serhat Koçhan"
@@ -77,7 +71,7 @@ const Home = async () => {
             "@type": "Person",
             "name": "Serhat Koçhan"
         },
-        "description": "Frontend developer ve teknoloji tutkunu Serhat Koçhan\'ın kişisel web sitesi"
+        "description": "Fullstack developer ve teknoloji tutkunu Serhat Koçhan\'ın kişisel web sitesi"
     };
     
     const breadcrumbSchema = {
@@ -116,35 +110,7 @@ const Home = async () => {
                     __html: JSON.stringify(breadcrumbSchema)
                 }}
             />
-            <Container className="mt-9">
-                <div className="max-w-2xl">
-                    <PageTitle>{Name}</PageTitle>
-                    <p className="mt-6 max-w-2xl text-base text-balance">{About}</p>
-                    <div className="mt-6 flex gap-6">
-                        {SocialMedia.map((socialProfile) => (
-                            <SocialLink
-                                key={socialProfile.name}
-                                aria-label={`Follow on ${socialProfile.name}`}
-                                href={socialProfile.link}
-                                icon={socialProfile.icon}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </Container>
-            <Photos/>
-            <Container className="mt-12">
-                <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-                    <div className="flex flex-col gap-16">
-                        {notes.map((blogPost) => (
-                            <NotePreview key={blogPost.slug} note={blogPost} dense/>
-                        ))}
-                    </div>
-                    <div className="lg:ml-auto space-y-10 lg:pl-12 xl:pl-20">
-                        <Resume/>
-                    </div>
-                </div>
-            </Container>
+            <AnimatedHomeContent notes={notes} />
         </>
     );
 };

@@ -1,7 +1,7 @@
 
 ![screenshot](screenshots/home.png)
 
-# Serhat Kochan - Next.js ve Notion ile Kişisel Web Sitesi
+# Serhat Kochan - Fullstack Developer Kişisel Web Sitesi
 
 Bu, aşağıdaki teknolojiler kullanılarak oluşturulmuş kişisel web sitemdir:
 
