@@ -28,7 +28,7 @@ export const Resume = () => {
               </dd>
               <dt className="sr-only">Date</dt>
               <dd
-                className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+                className="ml-auto text-xs text-zinc-500 dark:text-zinc-400"
                 aria-label={`${role.start} until ${role.end}`}
               >
                 <time dateTime={role.start}>{role.start}</time> <span aria-hidden="true">—</span>{' '}

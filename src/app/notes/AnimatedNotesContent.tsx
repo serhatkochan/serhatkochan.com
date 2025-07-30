@@ -21,7 +21,7 @@ export const AnimatedNotesContent = ({ notes, tags }: AnimatedNotesContentProps)
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
       >
-        <h3 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Etiketler</h3>
+        <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Etiketler</h2>
         <div className="mt-4 flex max-w-xl flex-wrap gap-1 font-mono">
           {tags.map((tag, index) => (
             <motion.div

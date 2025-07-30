@@ -7,7 +7,7 @@ export default function Loading() {
             intro="Programlama, ürün geliştirme, liderlik, seyahat ve diğer rastgele şeyler hakkındaki tüm düşüncelerim."
         >
             <div className="animate-pulse">
-                <h3 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Etiketler</h3>
+                <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">Etiketler</h2>
                 <div className="mt-4 flex max-w-xl flex-wrap gap-1 font-mono">
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
                         <div
