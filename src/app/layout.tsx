@@ -1,5 +1,6 @@
 import {ReactNode} from "react";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type {Metadata} from "next";
 import {GeistSans} from 'geist/font/sans';
 import {ThemeProvider} from "next-themes";
@@ -25,6 +26,27 @@ export const metadata: Metadata = {
     metadataBase: new URL(`${process.env.NEXT_SSL_URL}`),
     alternates: {
         canonical: 'https://serhatkochan.com',
+    },
+    openGraph: {
+        siteName: 'Serhat Koçhan',
+        title: 'Serhat Koçhan - Fullstack Developer & Teknoloji Tutkunu',
+        description: 'Serhat Koçhan\'ın kişisel web sitesi. React, JavaScript, TypeScript, Java Spring Boot ile fullstack uygulamalar geliştiren yazılım geliştirici.',
+        url: 'https://serhatkochan.com',
+        type: 'website',
+        images: [
+            {
+                url: '/opengraph-image',
+                width: 1200,
+                height: 630,
+                alt: 'Serhat Koçhan',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Serhat Koçhan - Fullstack Developer & Teknoloji Tutkunu',
+        description: 'Serhat Koçhan\'ın kişisel web sitesi. React, JavaScript, TypeScript, Java Spring Boot ile fullstack uygulamalar geliştiren yazılım geliştirici.',
+        images: ['/twitter-image'],
     },
     robots: {
         index: true,
@@ -123,6 +145,7 @@ export default function RootLayout({children}: Readonly<{ children: ReactNode }>
                         <main className="z-10">
                             {children}
                             <Analytics />
+                            <SpeedInsights />
                         </main>
                         <Footer />
                     </div>
